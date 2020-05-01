@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int findNumbers(vector<int>& nums) {
+        int count1=0;
+        for(int i=0;i<nums.size();i++) //Array indexing will be starting at 0 and array name will be mentioned above and you'll have to use arrayname.size() for finding the size of array
+        {
+            int count2 = 0;
+            while(nums[i]!=0)
+            {
+                
+                nums[i]/=10;
+                count2++;
+            }
+            if(count2%2==0)
+                count1++;
+        }
+        return count1;
+    }
+};
