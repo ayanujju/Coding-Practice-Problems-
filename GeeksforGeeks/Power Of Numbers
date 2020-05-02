@@ -1,0 +1,8 @@
+//Function
+long long power(int N,int R)
+{
+   //Your code here
+    if(N==1 || R==0)
+        return 1;
+    return (N*power(N,R-1))%mod;
+}
