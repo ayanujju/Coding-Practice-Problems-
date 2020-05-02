@@ -1,0 +1,9 @@
+//Function
+int digitalRoot(int n)
+{
+    int sum = 0;
+    if(n<=9)
+        return n;
+    sum = (n%10)+digitalRoot(n/10);
+    return digitalRoot(sum);
+}
