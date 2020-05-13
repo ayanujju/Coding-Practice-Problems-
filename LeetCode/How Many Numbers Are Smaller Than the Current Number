@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<int> smallerNumbersThanCurrent(vector<int>& nums) {
+        int count=0;
+        vector<int>vec;
+        for(int i=0;i<nums.size();i++)
+        {
+            //int count=0; If we write this line ther's no need of writing count at any other places
+            for(int j=0;j<nums.size();j++)  //Can't use for(int j=0;j<nums.size() && j!=i;j++) 
+            {
+                /*if(j==i)
+                    continue;*/ //instead of writing this line, I have written *line below
+                if(j!=i) // *line
+                {
+                    if(nums[i]>nums[j])
+                        count++;
+                }
+                
+            }
+            vec.push_back(count);
+            count=0;
+        }
+        return vec;
+    }
+};
