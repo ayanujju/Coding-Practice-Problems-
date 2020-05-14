@@ -1,0 +1,8 @@
+class Solution {
+public:
+    double nthPersonGetsNthSeat(int n) {
+        if(n==1)
+            return 1.00000;
+        return double((1.000000)/2); //The only two possible case is the first person found his right seat or not 
+    }
+};
