@@ -1,0 +1,27 @@
+class Solution {
+public:
+    vector<string> fizzBuzz(int n) {
+        vector<string> fizzBuzzz;
+        for(int i=1;i<=n;i++)
+        {
+            if(i%15==0) //According to question if we don't check the codition of divisibility in the first phase then bug will come because in case of 15 which is divisible by both 3 and 5, it'll check for 3 first and print accordingly which will be wrong answer
+                 fizzBuzzz.push_back("FizzBuzz");
+            else if(i%5==0)
+                 fizzBuzzz.push_back("Buzz");
+            else if(i%3==0)
+                fizzBuzzz.push_back("Fizz");
+            else
+            {
+                //We cann't pushback directly integer to string, so first we'll have to covert integer to character and then character to string or directly from integer to string
+                /*
+                char c = i + '0'; //Integer to character
+                string s(1, c); //Character to string
+                */
+                string str= to_string(i);
+                fizzBuzzz.push_back(str);
+            }
+               
+        }
+        return fizzBuzzz;
+    }
+};
