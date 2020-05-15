@@ -1,0 +1,18 @@
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        
+        //Checking the both strings equality by sorting 
+        sort(s.begin(),s.end());
+        sort(t.begin(),t.end());
+        
+        //cout << s << " " << t << "\n"; Sort function not only sort integers but it can sort characters also
+        
+        if(s==t)
+            return true;
+        return false;
+        
+        //return (s==t); Or use one line
+        
+    }
+};
