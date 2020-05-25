@@ -1,0 +1,25 @@
+
+/*  Function which converts A[][] to its transpose
+*   n: size of matrix
+*   N: globally defined for matrix
+*   A: input matrix
+*/
+void transpose( int A[N][N],int n) 
+{ 
+	// Your code here
+	int temp[N][N];
+	for(int i=0;i<N;i++)
+	{
+	    for(int j=0;j<N;j++)
+	    {
+	        temp[i][j]= A[i][j];
+	    }
+	}
+	for(int i=0;i<N;i++)
+	{
+	    for(int j=0;j<N;j++)
+	    {
+	        A[i][j]=temp[j][i];
+	    }
+	}
+}
