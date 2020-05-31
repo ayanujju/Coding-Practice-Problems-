@@ -1,0 +1,29 @@
+class Solution {
+public:
+    vector<int> selfDividingNumbers(int left, int right) {
+        vector<int> vec;
+        if(left==0 || right==0) 
+            return vec;
+        for(int i=left;i<=right;i++)
+        {
+            int temp=i,temp1=0;
+            while(temp!=0)
+            {
+                if(temp%10==0) //numbers having digits 0 are not perfect number
+                {
+                    temp1=1;
+                    break;
+                }
+                if((i%(temp%10))!=0)
+                {
+                    temp1=1;
+                    break;
+                }  
+                temp/=10;
+            }
+            if(temp1==0)
+                vec.push_back(i);
+        }
+        return vec;
+    }
+};
