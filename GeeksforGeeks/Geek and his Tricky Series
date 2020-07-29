@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+ {
+	//code
+	int t;
+	cin >> t;
+	while(t--)
+	{
+	    int n;
+	    cin >> n;
+	    long long result=7;
+	    for(int i=2;i<=n;i++)
+	    {
+	        result=((result*2)+(i-1));
+	    }
+	    cout << result%((10^9)+7) <<"\n";
+	}
+	return 0;
+}
